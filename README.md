@@ -1,0 +1,1 @@
+python manage.py --help  查看命令
