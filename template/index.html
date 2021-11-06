@@ -7,6 +7,12 @@
     <title></title>
 </head>
 <body>
-    hello {{name}}
+    <p>约吗</p>
+    <ul>
+        {% for book in books %}
+             <li>{{book.name}}</li>
+        {% endfor %}
+    </ul>
+    
 </body>
 </html>
