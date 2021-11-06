@@ -7,4 +7,4 @@ def index(request):
       "name":"志玲妹妹"
    }
    return render(request,'index.html',context)
-   return HttpResponse('index')
+   
