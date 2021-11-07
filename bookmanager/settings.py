@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
 """
 Django settings for bookmanager project.
 
@@ -11,6 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+from database_config import *
+
 # 导入os
 import os
 
@@ -81,10 +85,24 @@ WSGI_APPLICATION = 'bookmanager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# sqlite 主要是一个嵌入式的关系型数据库
+# 主要在移动端使用
+# sqlite 属于小型关系型数据库
+
+# 中型数据库 mysql sqlserver
+# 大型 oracle  ,DB2
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+         # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST':HOST,
+        'PORT':PORT,
+        'USER':USER,
+        'PASSWORD':PASSWORD,
+        'NAME': Name,
+       
     }
 }
 
